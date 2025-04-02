@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace CursorTest
+namespace CursorTesting
 {
     public class PlayerController : MonoBehaviour
     {
@@ -25,8 +25,8 @@ namespace CursorTest
                 moveInput = 1f;
             }
 
-            Vector3 movement = new Vector3(moveInput * moveSpeed, rb.velocity.y, 0f);
-            rb.velocity = movement;
+            Vector3 movement = new Vector3(moveInput * moveSpeed, rb.linearVelocity.y, 0f);
+            rb.linearVelocity = movement;
         }
     }
 }
